@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% block title %} Bincom app {% endblock title %}</title>
+    
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        {% block style %}
+        {% endblock style %}
+
+      }
+    </style>
+    
+
+  </head>
+  <body>
+    <header>
+      <div
+        style="
+          width: 100%;
+          height: 20%;
+          background: linear-gradient(
+            to bottom right,
+            rgb(1, 1, 63),
+            rgb(25, 5, 206)
+          );
+          font: larger;
+          padding: 15px;
+          color: white;
+        "
+      >
+      <a style="text-decoration: none; color: white;" href="{{ url_for('pl_unit_score') }}">BINCOM ELECTION RESULTS APP</a>
+        
+      </div>
+    </header>
+    <div style="padding: 20px;">
+      {% block body %} {% endblock body %}
+    </div>
+
+    
+  </body>
+</html>
